@@ -11,4 +11,9 @@
         
         $name="Aditya";
         echo "Hi ".$name."! How are you?";
+
+        $a="aditya"
+        $$a=4;
+        echo $a."<br>";
+        echo $aditya;
     ?>
