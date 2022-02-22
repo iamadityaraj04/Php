@@ -7,16 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <form action="data.php" method="get">
+    <!-- <form action="data.php" method="GET"> -->
+    <!-- <form action="data.php" method="POST">
         Firstname: <input type="text" name="fname"><br><br>
         Lastname: <input type="text" name="lname"><br><br>
         Age: <input type="text" name="age"><br><br>
         <input type="submit">
     </form> -->
-    <form action="data.php" method="post">
-        Firstname: <input type="text" name="fname"><br><br>
-        Lastname: <input type="text" name="lname"><br><br>
-        Age: <input type="text" name="age"><br><br>
+
+    <form action="data.php" method="POST">
+        Firstname: <input type="text" name="arr[]"><br><br>
+        Lastname: <input type="text" name="arr[]"><br><br>
+        Age: <input type="text" name="arr[]"><br><br>
         <input type="submit">
     </form>
 </body>
