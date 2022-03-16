@@ -5,6 +5,12 @@
             $this->x=$x;
             $this->y=$y;
         }
+
+        //destructor is automatically called at the end.
+        function __destruct()
+        {
+            echo "Done :)";
+        }
         function add(){
             echo $this->x+$this->y;
             echo "<br>";
