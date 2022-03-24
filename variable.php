@@ -12,7 +12,7 @@
         $name="Aditya";
         echo "Hi ".$name."! How are you?";
 
-        $a="aditya"//use to declare variable
+        $a="aditya";//use to declare variable
         $$a=4; // reference variable that stores the value of the $variable inside
         echo $a."<br>";
         echo $aditya;
