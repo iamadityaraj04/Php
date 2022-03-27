@@ -16,6 +16,9 @@
     <fieldset>
         <legend>Upload Files</legend>
         <form action="" method="POST" enctype="multipart/form-data">
+                    <label for="photo">Name : </label>
+                    <input type="text" name="name">
+                    <br><br>
                     <label for="photo">Photo : </label>
                     <input type="file" name="photo">
                     <br><br>
@@ -45,7 +48,7 @@
 
             if($type){
                 //makes directory to store the uploaded file
-                $path = "documents/";
+                $path = $_POST["name"]."/"."documents/";
                 if(!is_dir($path)){
                     mkdir($path,0777,true);
                 }
