@@ -88,7 +88,7 @@
 
         //inserting data in table
         $sql = "INSERT INTO DETAILS(name, age, gender, location, salary)
-                VALUES ('$name', '$age', '$gender', '$location', '$salary')";
+                fVALUES ('$name', '$age', '$gender', '$location', '$salary')";
         if($connect->query($sql)===true) {
         echo "New record inserted successfully";
         } else {
