@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="287" height="168.872" viewBox="0 0 287 168.872">
+  <g id="Group_53" data-name="Group 53" transform="translate(-207 -2447)">
+    <g id="Group_39" data-name="Group 39" transform="translate(-1566 1033.71)">
+      <path id="Path_12" data-name="Path 12" d="M312.028,138.1h-100.9v-2.08H165.371v2.08H64.052a6.825,6.825,0,0,0-6.825,6.825V283.091a6.825,6.825,0,0,0,6.825,6.825H312.028a6.825,6.825,0,0,0,6.825-6.825V144.923a6.825,6.825,0,0,0-6.825-6.825Z" transform="translate(1726.172 1277.272)" fill="#046c95"/>
+      <path id="Path_16" data-name="Path 16" d="M0,0H243.326V137.261H0Z" transform="translate(1792.549 1427.432)" fill="#e2f2e4"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="2.496" cy="2.496" r="2.496" transform="translate(1911.509 1418.697)" fill="#b3e0ee"/>
+      <path id="Path_13" data-name="Path 13" d="M224.145,187.015H50.406V49.754Z" transform="translate(1742.143 1377.678)" fill="#0196c1" opacity="0.1"/>
+      <rect id="Rectangle_10" data-name="Rectangle 10" width="22.729" height="4.749" transform="translate(1902.848 1516.971)" fill="#3f3d56"/>
+      <rect id="Rectangle_11" data-name="Rectangle 11" width="203.346" height="2.035" transform="translate(1817.641 1464.48)" fill="#3f3d56"/>
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="125.659" height="2.035" transform="translate(1817.641 1484.112)" fill="#3f3d56"/>
+      <rect id="Rectangle_13" data-name="Rectangle 13" width="203.346" height="2.035" transform="translate(1817.641 1503.744)" fill="#3f3d56"/>
+      <path id="Path_15" data-name="Path 15" d="M309.273,516.724H285.526v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711H243.8v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711H229.89v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339H207.5a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339H137.955a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339H96.228a.339.339,0,0,0-.339.339v1.711H90.8v-1.711a.339.339,0,0,0-.339-.339H82.319a.339.339,0,0,0-.339.339v1.711H76.891v-1.711a.339.339,0,0,0-.339-.339H68.41a.339.339,0,0,0-.339.339v1.711H62.982v-1.711a.339.339,0,0,0-.339-.339H54.5a.339.339,0,0,0-.339.339v1.711H38.556a8.142,8.142,0,0,0-8.142,8.142v3.682a8.142,8.142,0,0,0,8.142,8.142H309.273a8.142,8.142,0,0,0,8.142-8.142v-3.682a8.142,8.142,0,0,0-8.142-8.142Z" transform="translate(1742.585 1045.473)" fill="#046c95"/>
+    </g>
+    <text id="Enter_Details" data-name="Enter Details" transform="translate(318 2485.258)" fill="#046c95" font-size="11" font-family="AvenirNext-DemiBold, Avenir Next" font-weight="300"><tspan x="0" y="0">Enter Details</tspan></text>
+  </g>
+</svg>

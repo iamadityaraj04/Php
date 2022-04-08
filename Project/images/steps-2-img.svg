@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287" height="168.872" viewBox="0 0 287 168.872">
+  <defs>
+    <filter id="Rectangle_4" x="109.791" y="99.892" width="69.007" height="32.395" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_54" data-name="Group 54" transform="translate(-826.5 -2447)">
+    <g id="Group_39" data-name="Group 39" transform="translate(-946.5 1033.71)">
+      <path id="Path_12" data-name="Path 12" d="M312.028,138.1h-100.9v-2.08H165.371v2.08H64.052a6.825,6.825,0,0,0-6.825,6.825V283.091a6.825,6.825,0,0,0,6.825,6.825H312.028a6.825,6.825,0,0,0,6.825-6.825V144.923a6.825,6.825,0,0,0-6.825-6.825Z" transform="translate(1726.172 1277.272)" fill="#046c95"/>
+      <path id="Path_16" data-name="Path 16" d="M0,0H243.326V137.261H0Z" transform="translate(1792.549 1427.432)" fill="#e2f2e4"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="2.496" cy="2.496" r="2.496" transform="translate(1911.509 1418.697)" fill="#b3e0ee"/>
+      <path id="Path_13" data-name="Path 13" d="M224.145,187.015H50.406V49.754Z" transform="translate(1742.143 1377.678)" fill="#046c95" opacity="0.1"/>
+      <path id="Path_15" data-name="Path 15" d="M309.273,516.724H285.526v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711H243.8v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711H229.89v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339H207.5a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339H137.955a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339h-8.142a.339.339,0,0,0-.339.339v1.711h-5.089v-1.711a.339.339,0,0,0-.339-.339H96.228a.339.339,0,0,0-.339.339v1.711H90.8v-1.711a.339.339,0,0,0-.339-.339H82.319a.339.339,0,0,0-.339.339v1.711H76.891v-1.711a.339.339,0,0,0-.339-.339H68.41a.339.339,0,0,0-.339.339v1.711H62.982v-1.711a.339.339,0,0,0-.339-.339H54.5a.339.339,0,0,0-.339.339v1.711H38.556a8.142,8.142,0,0,0-8.142,8.142v3.682a8.142,8.142,0,0,0,8.142,8.142H309.273a8.142,8.142,0,0,0,8.142-8.142v-3.682a8.142,8.142,0,0,0-8.142-8.142Z" transform="translate(1742.585 1045.473)" fill="#046c95"/>
+      <g id="Group_42" data-name="Group 42" transform="translate(145.258 -255.236)">
+        <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(1710.065 1745.494)" fill="#fff" stroke="#707070" stroke-width="0.2">
+          <rect width="122.355" height="15.333" rx="7.667" stroke="none"/>
+          <rect x="0.1" y="0.1" width="122.155" height="15.133" rx="7.567" fill="none"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 1627.74, 1668.53)" filter="url(#Rectangle_4)">
+          <rect id="Rectangle_4-2" data-name="Rectangle 4" width="51.007" height="14.395" rx="7.197" transform="translate(118.79 105.89)" fill="#292d4f"/>
+        </g>
+        <text id="Verify_It" data-name="Verify It" transform="translate(1761.624 1783.448)" fill="#e2f2e4" font-size="4" font-family="AvenirNext-Bold, Avenir Next" font-weight="700"><tspan x="0" y="0">Verify It</tspan></text>
+        <text id="Verify_Your_Certificate" data-name="Verify Your Certificate" transform="translate(1715.095 1724.784)" fill="#046c95" font-size="11" font-family="AvenirNext-DemiBold, Avenir Next" font-weight="300"><tspan x="0" y="0">Verify Your Certificate</tspan></text>
+        <text id="Enter_Certificate_Number" data-name="Enter Certificate Number" transform="translate(1721.37 1754.524)" fill="#292d4f" font-size="4" font-family="AvenirNext-UltraLight, Avenir Next" font-weight="100"><tspan x="0" y="0">Enter Certificate Number</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
