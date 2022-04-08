@@ -54,6 +54,7 @@ html{
 }
 #loginBtn:hover{
     color: #e2f2e4;
+    transition: color 0.3s ease-in-out;
 }
 @media only screen and (max-device-width : 1005px) {
     #body{
@@ -233,6 +234,7 @@ html{
 }
 #verify-certificate-btn:hover{
     background-color: #48b5d6;
+    transition: background-color 0.3s ease-in-out;
 }
 
 @media only screen and (max-device-width : 1024px){
@@ -451,6 +453,7 @@ html{
 }
 #download-certificate-btn:hover{
     background-color: #48b5d6;
+    transition: background-color 0.3s ease-in-out;
 }
 
 
@@ -610,37 +613,40 @@ html{
     flex-direction: column;
     justify-content: center;
 }
-#login-page-btn{
-    background-color: #292d4f;
-    border: none;
-    width: 150px;
-    height: 35px;
-    border-radius: 50px;
-    color: #e2f2e4;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 0px #000000;
-}
-#login-page-btn:hover{
-    background-color:  #00acee;
-}
-#login-form-input input{
-    border: none;
+.login-form{
+    width: 300px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: none;
     background-color: #e2f2e4;
-    border-bottom: 2px solid  #292d4f;
-    width: 80%;
+    border-bottom: 1px solid #292d4f ;
 }
-#login-form-input p, #login-form-input input, #login-form-input button{
-    margin: 10px;
-    padding: 10px;
+#login-form-btn{
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 130px;
+    background-color: #292d4f ;
+    color:#e2f2e4 ;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 2px 2px 2px 0px #000000;
+    transition: background-color 0.3s ease-in-out;
 }
+#login-form-btn:hover{
+    background-color: #48b5d6;
+}
+
 #login-form-login{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-#login-form-login > p{
-    font-size: 30px;
+    margin-top: 50px;
 }
 #login-homepage-btn{
     position: relative;
@@ -653,6 +659,7 @@ html{
     border: none;
     cursor: pointer;
 }
+
 #login-homepage-btn a{
     text-decoration: none;
     color: #292d4f;
@@ -660,4 +667,5 @@ html{
 #login-homepage-btn:hover{
     background-color: #e2f2e4;
     color: #292d4f;
+    transition: background-color 0.3s ease-in-out;
 }

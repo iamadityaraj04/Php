@@ -30,7 +30,9 @@
     <div class="container" id="container">
         <nav class="navbar" id="navbar">
             <div class="navLogo">
-                <img src="images/logo.svg" alt="error" id="headerlogo" width="200px">
+                <a href="home.php">
+                    <img src="images/logo.svg" alt="error" id="headerlogo" width="200px">
+                </a>
                 <div id="menu-toggle" onclick="menutoggle()">
                     <span></span>
                     <span></span>
@@ -43,7 +45,7 @@
                     <li><a href="#subContainer2">VERIFY CERTIFICATE</a></li>
                     <li><a href="#subContainer3">ABOUT</a></li>
                     <li><a href="#subContainer4">CONTACT</a></li>
-                    <li><a href="login.html" id="loginBtn">LOGIN</a></li>
+                    <li><a href="login.php" id="loginBtn">LOGIN</a></li>
                 </ul>
 
             </div>
@@ -73,7 +75,9 @@
                                 <p id="verify-certificate-title">Verify Your Certificate</p>
                             </div>
                             <div>
-                                <input type="number" id="verify-certificate-txtfield" placeholder="Enter Certificate Number">
+                                <form action="" method="POST">
+                                    <input type="number" id="verify-certificate-txtfield" placeholder="Enter Certificate Number">
+                                </form>
                             </div>
                             <div>
                                 <button id="verify-certificate-btn" onclick="certificateDisplay()">Verify It</button>
