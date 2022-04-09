@@ -45,7 +45,7 @@
                     <li><a href="#subContainer2">VERIFY CERTIFICATE</a></li>
                     <li><a href="#subContainer3">ABOUT</a></li>
                     <li><a href="#subContainer4">CONTACT</a></li>
-                    <li><a href="login.php" id="loginBtn">LOGIN</a></li>
+                    <li><a href="login.php" id="loginBtn">LOGIN / REGISTER</a></li>
                 </ul>
 
             </div>
