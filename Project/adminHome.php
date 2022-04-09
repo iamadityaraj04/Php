@@ -25,7 +25,7 @@
         </div>
         <div class="navMenu" id="navMenu">
             <ul>
-                <li><a href="logout.php" id="loginBtn">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
     </nav>

@@ -15,6 +15,7 @@
         if(mysqli_num_rows($result) ==1){
             session_start();
             $_SESSION['gvAdmin']='true';
+            sleep(2);
             header('location:adminHome.php');
         }else{
             echo '<script>alert("Wrong Employee Id or Password :(")</script>';

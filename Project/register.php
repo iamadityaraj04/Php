@@ -50,11 +50,10 @@
                         <form action="register.php" method="POST">
                             <h1 style="color: #292d4f;">Register</h1>
                             <label for="">Name</label><input type="text" name="register-name" class="login-form"><br><br>
-                            <label for="">Email</label><input type="text" name="register-email" class="login-form"><br><br>
-                            <label for="">Employee Id</label><input type="text" name="register-empId" class="login-form"><br><br>
+                            <label for="">Email</label><input type="email" name="register-email" class="login-form"><br><br>
+                            <label for="">Employee Id</label><input type="number" name="register-empId" class="login-form"><br><br>
                             <label for="">Password</label><input type="password" name="register-pwd" class="login-form"> <br>
-                            <label for="">Confirm Password</label><input type="text" name="cpwd" class="login-form"> <br>
-                            <input type="submit" value="Register" name="register-submit" id="login-form-btn">
+                            <input type="submit" value="Register" name="register-submit" id="login-form-btn" onclick="matchPassword()">
                         </form>
                     </div>
                 </center>
