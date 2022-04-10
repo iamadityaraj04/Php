@@ -1,14 +1,10 @@
 <?php
     if($_POST){
-        $hostname="localhost";
-        $username="root";
-        $password="";
-        $dbname="PHPDB";
         
         $lEmpId=$_REQUEST["login-empId"];
         $lPwd=$_REQUEST["login-pwd"];
         
-        $connect=new mysqli('localhost','root','','PHPDB');
+        $connect=new mysqli('localhost','root','','PhpProject');
         $query="SELECT * from gvAdmin where empId='$lEmpId' and pwd='$lPwd'" ;
         $result=$connect->query($query);
         
@@ -37,14 +33,31 @@
     <style>
         form{
             padding: 85px;
-            font-family: Arial, Helvetica, sans-serif;;
-        }
-        label{
-            margin-top: 50px;
-            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
         }
         input{
             font-size: 18px;
+        }
+        #profile-img,#password-img{
+            width: 20px;
+            margin: 10px 10px;
+        }
+        .login-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 18px;
+        }
+        .login-form{
+            width: 300px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            height: 30px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            background-color: #e2f2e4;
+            border-bottom: 1px solid #292d4f ;
         }
     </style>
 </head>
@@ -68,8 +81,12 @@
                     <div id="login-form-input">
                         <form method="POST">
                             <h1 style="color: #292d4f;">Login</h1>
-                            <label for="">Employee Id</label><input type="number" name="login-empId" class="login-form"><br><br>
-                            <label for="">Password</label><input type="password" name="login-pwd" class="login-form"> <br>
+                            <div class="login-icon">
+                                <img src="images/profile.svg" alt="" id="profile-img"> <input type="number" name="login-empId" class="login-form" placeholder="Employee Id"><br><br>
+                            </div>
+                            <div class="login-icon">
+                                <img src="images/password.svg" alt="" id="password-img"> <input type="password" name="login-pwd" class="login-form" placeholder="Password"> <br>
+                            </div>
                             <input type="submit" value="Login" name="login-submit" id="login-form-btn">
                         </form>
                     </div>

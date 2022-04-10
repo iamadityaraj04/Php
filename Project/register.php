@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo1.svg">
-    <title>Login Page</title>
+    <title>Register Page</title>
     <style>
         form{
             padding: 20px;
@@ -30,11 +30,6 @@
             <a href="home.php">
                 <img src="images/logo.svg" alt="error" id="headerlogo" width="200px">
         </a>
-            <div id="menu-toggle" onclick="menutoggle()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
         <div class="navMenu" id="navMenu">
             <ul>
@@ -49,11 +44,11 @@
                     <div id="login-form-input">
                         <form action="register.php" method="POST">
                             <h1 style="color: #292d4f;">Register</h1>
-                            <label for="">Name</label><input type="text" name="register-name" class="login-form"><br><br>
-                            <label for="">Email</label><input type="email" name="register-email" class="login-form"><br><br>
-                            <label for="">Employee Id</label><input type="number" name="register-empId" class="login-form"><br><br>
-                            <label for="">Password</label><input type="password" name="register-pwd" class="login-form"> <br>
-                            <input type="submit" value="Register" name="register-submit" id="login-form-btn" onclick="matchPassword()">
+                            <input type="text" name="register-name" class="login-form" placeholder="Name"><br><br>
+                            <input type="email" name="register-email" class="login-form" placeholder="Email"><br><br>
+                            <input type="number" name="register-empId" class="login-form" placeholder="Employee Id"><br><br>
+                            <input type="password" name="register-pwd" class="login-form" placeholder="Password"> <br>
+                            <input type="submit" value="Register" name="register-submit" id="login-form-btn">
                         </form>
                     </div>
                 </center>
@@ -64,11 +59,7 @@
 </html>
 
 <?php
-    $hostname="localhost";
-    $username="root";
-    $password="";
-    $dbname="PHPDB";
-    $connect=new mysqli('localhost','root','','PHPDB');
+    $connect=new mysqli('localhost','root','','PhpProject');
     
     
     
@@ -79,14 +70,16 @@
         $rEmpId=$_REQUEST["register-empId"];
         $rPwd=$_REQUEST["register-pwd"];
         
-        //storing data
-        $sql = "INSERT INTO gvAdmin(name, email, empId, pwd)
-                VALUES ('$rName', '$rEmail', '$rEmpId', '$rPwd')";
-        if($connect->query($sql)===true) {
-            echo '<script>alert("Registered Sucessfully :)")</script>';
-        } else {
-            echo '<script>alert("Failed to register :(")</script>';
+        $query="SELECT empId from gvAdmin where empId='$rEmpId' or email='$rEmail'" ;
+        if(mysqli_num_rows($connect->query($query)) ==1){
+            echo '<script>alert("Accont with this email/employee Id already exists. Please login!")</script>';
+        }else {
+            $sql = "INSERT INTO gvAdmin(name, email, empId, pwd)
+                    VALUES ('$rName', '$rEmail', '$rEmpId', '$rPwd')";  
+            $insert=$connect->query($sql);
+            if($insert==true) {
+                echo '<script>alert("Registered Sucessfully :)")</script>';
+            } 
         }
-    }
-
+}
 ?>

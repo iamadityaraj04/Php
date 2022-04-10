@@ -600,16 +600,16 @@ html{
 }
 .login-form{
     width: 300px;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 30px;
     height: 30px;
     border-left: none;
     border-right: none;
     border-top: none;
-    border-radius: none;
     background-color: #e2f2e4;
     border-bottom: 1px solid #292d4f ;
 }
+
 #login-form-btn{
     width: 150px;
     height: 40px;

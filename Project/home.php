@@ -182,7 +182,7 @@
 
                 </div>
             </div>
-            <center><p id="copyright">&copy; <span> Get Verified 2021</span></p></center>
+            <center><p id="copyright">&copy; <span> Get Verified 2022</span></p></center>
         </div>
     </div>
     
