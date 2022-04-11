@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo1.svg">
-    <title>Register Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         form{
             padding: 20px;
@@ -44,10 +44,12 @@
                     <div id="login-form-input">
                         <form action="register.php" method="POST">
                             <h1 style="color: #292d4f;">Register</h1>
-                            <input type="text" name="register-name" class="login-form" placeholder="Name"><br><br>
-                            <input type="email" name="register-email" class="login-form" placeholder="Email"><br><br>
-                            <input type="number" name="register-empId" class="login-form" placeholder="Employee Id"><br><br>
-                            <input type="password" name="register-pwd" class="login-form" placeholder="Password"> <br>
+                            <input type="text" name="register-name" class="login-form" placeholder="Name" required><br><br>
+                            <input type="email" name="register-email" class="login-form" placeholder="Email" required><br><br>
+                            <input type="number" name="register-empId" class="login-form" placeholder="Employee Id" required><br><br>
+                            <input type="password" id="pwd" name="register-pwd" class="login-form" placeholder="Password" required> <br>
+                            <input type="text" id="cpwd" class="login-form" placeholder="Confirm Password" required> <br>
+                            <div id="err"></div>
                             <input type="submit" value="Register" name="register-submit" id="login-form-btn">
                         </form>
                     </div>
@@ -55,13 +57,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#cpwd').keyup(function(){
+                var pwd=$('#pwd').val();
+                var cpwd=$('#cpwd').val();
+                if(cpwd!=pwd){
+                    $('#err').html('*Password do not match.');
+                    $('#err').css('color', 'red');
+                    return false;
+                }else{
+                    $('#err').html('');
+                    return false;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
 <?php
     $connect=new mysqli('localhost','root','','PhpProject');
-    
-    
     
     if(isset($_REQUEST['register-submit'])){
         
@@ -78,7 +95,7 @@
                     VALUES ('$rName', '$rEmail', '$rEmpId', '$rPwd')";  
             $insert=$connect->query($sql);
             if($insert==true) {
-                echo '<script>alert("Registered Sucessfully :)")</script>';
+                echo '<script>alert("Registered Sucessfully. You can login now.")</script>';
             } 
         }
 }

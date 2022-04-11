@@ -1,26 +1,3 @@
-<?php
-    if($_POST){
-        
-        $lEmpId=$_REQUEST["login-empId"];
-        $lPwd=$_REQUEST["login-pwd"];
-        
-        $connect=new mysqli('localhost','root','','PhpProject');
-        $query="SELECT * from gvAdmin where empId='$lEmpId' and pwd='$lPwd'" ;
-        $result=$connect->query($query);
-        
-        if(mysqli_num_rows($result) ==1){
-            session_start();
-            $_SESSION['gvAdmin']='true';
-            sleep(2);
-            header('location:adminHome.php');
-        }else{
-            echo '<script>alert("Wrong Employee Id or Password :(")</script>';
-        }
-    }
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,10 +59,10 @@
                         <form method="POST">
                             <h1 style="color: #292d4f;">Login</h1>
                             <div class="login-icon">
-                                <img src="images/profile.svg" alt="" id="profile-img"> <input type="number" name="login-empId" class="login-form" placeholder="Employee Id"><br><br>
+                                <img src="images/profile.svg" alt="" id="profile-img"> <input type="number" name="login-empId" class="login-form" placeholder="Employee Id" required><br><br>
                             </div>
                             <div class="login-icon">
-                                <img src="images/password.svg" alt="" id="password-img"> <input type="password" name="login-pwd" class="login-form" placeholder="Password"> <br>
+                                <img src="images/password.svg" alt="" id="password-img"> <input type="password" name="login-pwd" class="login-form" placeholder="Password" required> <br>
                             </div>
                             <input type="submit" value="Login" name="login-submit" id="login-form-btn">
                         </form>
@@ -96,3 +73,23 @@
     </div>
 </body>
 </html>
+<?php
+    if($_POST){
+        
+        $lEmpId=$_REQUEST["login-empId"];
+        $lPwd=$_REQUEST["login-pwd"];
+        
+        $connect=new mysqli('localhost','root','','PhpProject');
+        $query="SELECT * from gvAdmin where empId='$lEmpId' and pwd='$lPwd'" ;
+        $result=$connect->query($query);
+        
+        if(mysqli_num_rows($result) ==1){
+            session_start();
+            $_SESSION['gvAdmin']='true';
+            sleep(2);
+            header('location:adminHome.php');
+        }else{
+            echo '<script>alert("Wrong Employee Id or Password :(")</script>';
+        }
+    }
+?>

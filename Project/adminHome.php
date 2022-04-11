@@ -44,11 +44,11 @@
             <center>
                 <fieldset>
                     <legend>Certificate Details</legend>
-                    Name on certificate: <input type="text" name="certi-name"> <br><br>
-                    Course Name: <input type="text" name="certi-course-name"> <br><br>
-                    Duration(in Weeks): <input type="number" name="certi-duration"> <br><br>
-                    Certificate Number: <input type="number" name="certi-number"> <br><br>
-                    Date of issue: <input type="date" name="certi-doi"> <br><br>
+                    Name on certificate: <input type="text" name="c-name" required> <br><br>
+                    Course Name: <input type="text" name="c-course-name" required> <br><br>
+                    Duration(in Weeks): <input type="number" name="c-duration" > <br><br>
+                    Certificate Number: <input type="number" name="c-number" required> <br><br>
+                    Date of issue: <input type="date" name="c-doi" required> <br><br>
                     <input type="submit" name="details-submit" id="login-form-btn">
                 </fieldset>
             </center>
@@ -57,20 +57,21 @@
 </body>
 </html>
 <?php
-    if(isset($_REQUEST['details-submit'])){
-        
-        $certiName=$_REQUEST["certi-name"];
-        $certiCourseName=$_REQUEST["certi-course-name"];
-        $certiDuration=$_REQUEST["certi-duration"];
-        $certiNumber=$_REQUEST["certi-number"];
-        $certiDoi=$_REQUEST["certi-doi"];
-
+    if(isset($_POST)){
         $connect=new mysqli('localhost','root','','PhpProject');
-        $query="SELECT * from certificateDetails where id='$certiNumber'" ;
+        
+        $cName=$_REQUEST["c-name"];
+        $cCourseName=$_REQUEST["c-course-name"];
+        $cDuration=$_REQUEST["c-duration"];
+        $cNumber=$_REQUEST["c-number"];
+        $cDoi=$_REQUEST["c-doi"];
+
+        $query="SELECT * from certificateDetails where cNumber='$cNumber'" ;
+        
         
         if(mysqli_num_rows($connect->query($query)) ==0){
-            $sql = "INSERT INTO certificateDetails(id, name, cname, cduration,cdoi)
-                    VALUES ('$certiNumber', '$certiName', '$certiCourseName', '$certiDuraion', '$certiDoi')";  
+            $sql = "INSERT INTO certificateDetails(cNumber, cName, cDuration, cDoi,cCourseName)
+                    VALUES ('$cNumber', '$cName', '$cDuration', '$cDoi', '$cCourseName')";  
             $insert=$connect->query($sql);
             if($insert==true) {
                 echo '<script>alert("Uploaded Sucessfully :)")</script>';

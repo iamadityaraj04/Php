@@ -12,21 +12,6 @@
     
 </head>
 <body>
-    <div id="certificate-display">
-        <a id="cross" onclick="returnHomepage()"><img src="images/cross.svg" alt="" width="20px"></a>
-        <div id="certificate-display-1">
-            <div id="demo-certificte-img">
-                <img src="images/demo-certificate.svg" alt="" width="800px">
-            </div>
-            <div id="demo-certificte-details">
-                <p>Name:</p>    
-                <p>Degree:</p>    
-                <p>Certificate Number:</p>    
-                <p>Date Of Issue:</p>    
-                <button id="download-certificate-btn">Download Certificate</button>
-            </div>
-        </div>
-    </div>
     <div class="container" id="container">
         <nav class="navbar" id="navbar">
             <div class="navLogo">
@@ -75,13 +60,13 @@
                                 <p id="verify-certificate-title">Verify Your Certificate</p>
                             </div>
                             <div>
-                                <form action="" method="POST">
-                                    <input type="number" id="verify-certificate-txtfield" placeholder="Enter Certificate Number">
+                                <form action="home.php" method="POST">
+                                    <input type="number" id="verify-certificate-txtfield" placeholder="Enter Certificate Number" name="cnumber" required >
+                                    <div>
+                                        <button type="submit" name="cfetch" id="verify-certificate-btn" ">Verify It</button>
+                                    </div>    
                                 </form>
                             </div>
-                            <div>
-                                <button id="verify-certificate-btn" onclick="certificateDisplay()">Verify It</button>
-                            </div>    
                         </div>
                     </div>
                 </div>
@@ -137,10 +122,12 @@
                 <div id="contact-us-msg">
                     <div id="contact-us-msg-form">
                         <p>Send Message Here</p>
-                            <input type="text" class="contact-us-form-textfield" placeholder="Name" ><br>
-                            <input type="email" class="contact-us-form-textfield" placeholder="Email"><br>
-                            <textarea name="" id="" cols="30" rows="3" placeholder="Message" class="contact-us-form-textfield"></textarea>
-                            <button id="contact-us-btn" type="submit" onclick="alert('Thank You For Writing Us.')">Send</button>
+                        <form action="home.php" method="POST">
+                            <input type="text" class="contact-us-form-textfield" placeholder="Name" name="qName" required><br>
+                            <input type="email" class="contact-us-form-textfield" placeholder="Email" name="qEmail" required><br>
+                            <textarea cols="30" rows="3" placeholder="Message" class="contact-us-form-textfield" name="qMsg" required></textarea>
+                            <button id="contact-us-btn" type="submit" name="qSubmit">Send</button>
+                        </form>
                     </div>
                 </div>
                 <div id="contact-us-img">
@@ -218,18 +205,6 @@
             }
         }
 
-        
-        function certificateDisplay() {
-            if(document.getElementById("verify-certificate-txtfield").value==0){
-                alert("Enter Certificate Number!")
-            }else{
-                document.getElementById("container").style.opacity="0.1";      
-                setTimeout(() => {  
-                    document.getElementById("certificate-display").style.display="block";
-                    document.getElementById("container").style.display="none";
-                }, 1000);
-            }
-        }
         function returnHomepage() {
             document.getElementById("container").style.opacity="1";   
             document.getElementById("certificate-display").style.display="none";
@@ -244,3 +219,35 @@
     </script>
 </body>
 </html>
+<?php
+    if(isset($_REQUEST['qSubmit'])){
+        $connect=new mysqli('localhost','root','','PhpProject');
+        $qName=$_REQUEST['qName'];
+        $qEmail=$_REQUEST['qEmail'];
+        $qMsg=$_REQUEST['qMsg'];
+        if($qName!=''|| $qEmail!=''||$qMsg!=''){
+            $sql = "INSERT INTO query(qname, qemail, qmsg)
+                    VALUES ('$qName', '$qEmail', '$qMsg')";  
+            $insert=$connect->query($sql);
+            if($insert==true) {
+                echo '<script>alert("Thank You for writing us. :)")</script>';
+            }
+        }
+    } 
+    if(isset($_REQUEST['cfetch'])){
+        $connect=new mysqli('localhost','root','','PhpProject');
+        
+        $cnumber=$_REQUEST['cnumber'];
+        $fetch="SELECT * from certificateDetails where cNumber='$cnumber'";
+        $result=$connect->query($fetch);
+        
+        if(mysqli_num_rows($result) ==1){
+            sleep(1);
+            header('location:result.php');
+        }else{
+            echo '<script>alert("DATA NOT FOUND!")</script>';
+        }
+
+        
+    } 
+?>

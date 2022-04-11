@@ -217,10 +217,9 @@ html{
     width: 350px;
     height: 40px;
     border: none;
+    padding: 5px 20px;
     border-radius: 15px;
-}
-#verify-certificate-txtfield ::placeholder{
-    margin-left: 50px;
+    font-size: 20px;
 }
 #verify-certificate-btn{
     background-color: #292d4f;
@@ -230,6 +229,7 @@ html{
     border-radius: 50px;
     color: #e2f2e4;
     cursor: pointer;
+    margin: 25px 70px;
     box-shadow: 2px 2px 2px 0px #000000;
 }
 #verify-certificate-btn:hover{
@@ -413,49 +413,6 @@ html{
 #contact-us-btn:hover{
  background-color:#48b5d6 ;
 }
-/* --------certificate-display----------- */
-#certificate-display{
-    display: none;
-    width: 100%;
-    background-color: #e3f6fc;
-}
-#certificate-display-1{
-    display: flex;
-    flex-direction: row;
-}
-#demo-certificte-img img{
-    margin: 150px 30px;
-}
-#demo-certificte-details{
-    margin: 300px 20px;
-}
-#demo-certificte-details p{
-    color: #00acee;
-    font-size: 20px;
-    padding: 8px;
-}
-#cross{
-    float: right;
-    margin: 20px;
-    cursor: pointer;
-}  
-#download-certificate-btn{
-    background-color: #292d4f;
-    border: none;
-    width: 180px;
-    height: 35px;
-    border-radius: 50px;
-    color: #e2f2e4;
-    cursor: pointer;
-    margin-left: 8px;
-    margin-top: 8px;
-    box-shadow: 2px 2px 2px 0px #000000;
-}
-#download-certificate-btn:hover{
-    background-color: #48b5d6;
-    transition: background-color 0.3s ease-in-out;
-}
-
 
 /* --------------------footer-------------------- */
 
