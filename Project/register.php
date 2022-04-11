@@ -1,3 +1,27 @@
+<?php
+    $connect=new mysqli('localhost','root','','PhpProject');
+    
+    if(isset($_REQUEST['register-submit'])){
+        
+        $rName=$_REQUEST["register-name"];
+        $rEmail=$_REQUEST["register-email"];
+        $rEmpId=$_REQUEST["register-empId"];
+        $rPwd=$_REQUEST["register-pwd"];
+        
+        $query="SELECT empId from gvAdmin where empId='$rEmpId' or email='$rEmail'" ;
+        if(mysqli_num_rows($connect->query($query)) ==1){
+            echo '<script>alert("Accont with this email/employee Id already exists. Please login!")</script>';
+        }else {
+            $sql = "INSERT INTO gvAdmin(name, email, empId, pwd)
+                    VALUES ('$rName', '$rEmail', '$rEmpId', '$rPwd')";  
+            $insert=$connect->query($sql);
+            if($insert==true) {
+                echo '<script>alert("Registered Sucessfully. You can login now.")</script>';
+            } 
+        }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,26 +101,3 @@
 </body>
 </html>
 
-<?php
-    $connect=new mysqli('localhost','root','','PhpProject');
-    
-    if(isset($_REQUEST['register-submit'])){
-        
-        $rName=$_REQUEST["register-name"];
-        $rEmail=$_REQUEST["register-email"];
-        $rEmpId=$_REQUEST["register-empId"];
-        $rPwd=$_REQUEST["register-pwd"];
-        
-        $query="SELECT empId from gvAdmin where empId='$rEmpId' or email='$rEmail'" ;
-        if(mysqli_num_rows($connect->query($query)) ==1){
-            echo '<script>alert("Accont with this email/employee Id already exists. Please login!")</script>';
-        }else {
-            $sql = "INSERT INTO gvAdmin(name, email, empId, pwd)
-                    VALUES ('$rName', '$rEmail', '$rEmpId', '$rPwd')";  
-            $insert=$connect->query($sql);
-            if($insert==true) {
-                echo '<script>alert("Registered Sucessfully. You can login now.")</script>';
-            } 
-        }
-}
-?>

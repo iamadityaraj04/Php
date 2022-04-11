@@ -1,3 +1,37 @@
+<?php
+    if(isset($_REQUEST['qSubmit'])){
+        $connect=new mysqli('localhost','root','','PhpProject');
+        $qName=$_REQUEST['qName'];
+        $qEmail=$_REQUEST['qEmail'];
+        $qMsg=$_REQUEST['qMsg'];
+        if($qName!=''|| $qEmail!=''||$qMsg!=''){
+            $sql = "INSERT INTO query(qname, qemail, qmsg)
+                    VALUES ('$qName', '$qEmail', '$qMsg')";  
+            $insert=$connect->query($sql);
+            if($insert==true) {
+                echo '<script>alert("Thank You for writing us. :)")</script>';
+            }
+        }
+    } 
+    if(isset($_REQUEST['cfetch'])){
+        $connect=new mysqli('localhost','root','','PhpProject');
+        
+        $cnumber=$_REQUEST['cnumber'];
+
+        $fetch="SELECT * from certificateDetails where cNumber='$cnumber'";
+        $result=$connect->query($fetch);
+        
+        if(mysqli_num_rows($result) ==1){
+            setcookie("cnumber","$cnumber", time()+3000,"/","",0);
+            sleep(1);
+            header('location:result.php');
+        }else{
+            echo '<script>alert("DATA NOT FOUND!")</script>';
+        }
+
+        
+    } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -219,35 +253,3 @@
     </script>
 </body>
 </html>
-<?php
-    if(isset($_REQUEST['qSubmit'])){
-        $connect=new mysqli('localhost','root','','PhpProject');
-        $qName=$_REQUEST['qName'];
-        $qEmail=$_REQUEST['qEmail'];
-        $qMsg=$_REQUEST['qMsg'];
-        if($qName!=''|| $qEmail!=''||$qMsg!=''){
-            $sql = "INSERT INTO query(qname, qemail, qmsg)
-                    VALUES ('$qName', '$qEmail', '$qMsg')";  
-            $insert=$connect->query($sql);
-            if($insert==true) {
-                echo '<script>alert("Thank You for writing us. :)")</script>';
-            }
-        }
-    } 
-    if(isset($_REQUEST['cfetch'])){
-        $connect=new mysqli('localhost','root','','PhpProject');
-        
-        $cnumber=$_REQUEST['cnumber'];
-        $fetch="SELECT * from certificateDetails where cNumber='$cnumber'";
-        $result=$connect->query($fetch);
-        
-        if(mysqli_num_rows($result) ==1){
-            sleep(1);
-            header('location:result.php');
-        }else{
-            echo '<script>alert("DATA NOT FOUND!")</script>';
-        }
-
-        
-    } 
-?>

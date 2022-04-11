@@ -1,3 +1,23 @@
+<?php
+    if($_POST){
+        
+        $lEmpId=$_REQUEST["login-empId"];
+        $lPwd=$_REQUEST["login-pwd"];
+        
+        $connect=new mysqli('localhost','root','','PhpProject');
+        $query="SELECT * from gvAdmin where empId='$lEmpId' and pwd='$lPwd'" ;
+        $result=$connect->query($query);
+        
+        if(mysqli_num_rows($result) ==1){
+            session_start();
+            $_SESSION['gvAdmin']='true';
+            sleep(2);
+            header('location:adminHome.php');
+        }else{
+            echo '<script>alert("Wrong Employee Id or Password :(")</script>';
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,23 +93,4 @@
     </div>
 </body>
 </html>
-<?php
-    if($_POST){
-        
-        $lEmpId=$_REQUEST["login-empId"];
-        $lPwd=$_REQUEST["login-pwd"];
-        
-        $connect=new mysqli('localhost','root','','PhpProject');
-        $query="SELECT * from gvAdmin where empId='$lEmpId' and pwd='$lPwd'" ;
-        $result=$connect->query($query);
-        
-        if(mysqli_num_rows($result) ==1){
-            session_start();
-            $_SESSION['gvAdmin']='true';
-            sleep(2);
-            header('location:adminHome.php');
-        }else{
-            echo '<script>alert("Wrong Employee Id or Password :(")</script>';
-        }
-    }
-?>
+

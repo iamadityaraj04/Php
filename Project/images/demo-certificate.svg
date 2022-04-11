@@ -8,7 +8,7 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Group_81" data-name="Group 81" transform="translate(-116.409 -212.308)">
+  <g id="Group_86" data-name="Group 86" transform="translate(-116.409 -212.308)">
     <g id="Group_68" data-name="Group 68" transform="translate(-53.684 30.179)">
       <g id="Group_63" data-name="Group 63">
         <g transform="matrix(1, 0, 0, 1, 170.09, 182.13)" filter="url(#Rectangle_14)">
@@ -23,13 +23,6 @@
           </g>
         </g>
       </g>
-      <text id="CERTIFICATE" transform="translate(695.834 330.272)" fill="#48b5d6" font-size="65" font-family="AvenirNext-DemiBold, Avenir Next" font-weight="300"><tspan x="-199.42" y="0">CERTIFICATE</tspan></text>
-      <text id="OF_COMPLETION" data-name="OF COMPLETION" transform="translate(697.2 388.363)" fill="#48b5d6" font-size="36" font-family="AvenirNext-Italic, Avenir Next" font-style="italic"><tspan x="-146.214" y="0">OF COMPLETION</tspan></text>
-      <text id="This_Certifies_that" data-name="This Certifies that" transform="translate(697.851 447.754)" fill="#292d4f" font-size="30" font-family="AvenirNext-Italic, Avenir Next" font-style="italic"><tspan x="-116.04" y="0">This Certifies that</tspan></text>
-      <text id="Name" transform="translate(698.682 510.229)" fill="#ff1a1a" font-size="53" font-family="AvenirNext-Italic, Avenir Next" font-style="italic"><tspan x="-72.186" y="0">Name</tspan></text>
-      <text id="Degree" transform="translate(698.682 657.258)" fill="#48b5d6" font-size="40" font-family="AvenirNext-Bold, Avenir Next" font-weight="700"><tspan x="-71.96" y="0">Degree</tspan></text>
-      <text id="Has_successfully_completed_the_training_programme_requirement_for" data-name="Has successfully completed the training
-programme requirement for" transform="translate(693.471 557.933)" fill="#292d4f" font-size="30" font-family="AvenirNext-Italic, Avenir Next" font-style="italic"><tspan x="-267.585" y="0">Has successfully completed the training</tspan><tspan x="-190.275" y="50">programme requirement for</tspan></text>
       <g id="Group_66" data-name="Group 66" transform="translate(306.79 272.982)">
         <g id="Group_2" data-name="Group 2">
           <g id="Group_9" data-name="Group 9" transform="translate(0)">
@@ -40,12 +33,6 @@ programme requirement for" transform="translate(693.471 557.933)" fill="#292d4f"
             </g>
             <path id="certificatealt" d="M48.286,27.551l6.888,7.39-9.686,3.014,2.3,9.829L38.672,45.7,45.99,69.021a4.28,4.28,0,0,1-2.008,3.731l-3.731-3.731L35.8,73.47a4.5,4.5,0,0,1-2.584-1.614,4.4,4.4,0,0,1-1-2.835l-4.663-14.78-4.592,14.78a4.424,4.424,0,0,1-1,2.835,4.478,4.478,0,0,1-2.584,1.614l-4.449-4.449-3.731,3.731a4.28,4.28,0,0,1-2.008-3.731L16.5,45.7,7.39,47.784l2.3-9.829L0,34.941l6.888-7.39L0,20.161,9.686,17.22,7.39,7.392l9.829,2.3L20.161,0l7.39,6.888L34.941,0l3.014,9.686,9.829-2.3-2.3,9.829,9.686,2.941Zm-20.7-13.776a13.3,13.3,0,0,0-9.757,4.053,13.3,13.3,0,0,0-4.053,9.757,13.3,13.3,0,0,0,4.053,9.757A13.3,13.3,0,0,0,27.588,41.4a13.3,13.3,0,0,0,9.757-4.053A13.3,13.3,0,0,0,41.4,27.586a13.3,13.3,0,0,0-4.053-9.757A13.3,13.3,0,0,0,27.588,13.776Z" fill="#48b5d6"/>
           </g>
-        </g>
-      </g>
-      <g id="Group_70" data-name="Group 70" transform="translate(601.79 739.448)">
-        <g id="Group_69" data-name="Group 69" transform="translate(0)">
-          <text id="Signature" transform="translate(95.5 23)" fill="#48b5d6" font-size="23" font-family="AvenirNext-Regular, Avenir Next"><tspan x="-50.174" y="0">Signature</tspan></text>
-          <line id="Line_1" data-name="Line 1" x2="192.173" fill="none" stroke="#2a2951" stroke-width="3"/>
         </g>
       </g>
     </g>
@@ -70,6 +57,5 @@ programme requirement for" transform="translate(693.471 557.933)" fill="#292d4f"
         </g>
       </g>
     </g>
-    <path id="FontAwsome_signature_" data-name="FontAwsome (signature)" d="M94.638,71.987c-7.864.219-19.084,3.419-24.762,4.469A67.434,67.434,0,0,1,58.323,77.98c-3.431,0-3.947-1.012-3.234-3.244.167-.5,1.776-4.95-6.483-4.756-3.811.094-9.762,1.55-25.734,7.875l6.3-6.481c4.615-4.744-8.077-9.468-19.691-6.425L1.146,67.256c-1.123.294-1.457.912-.744,1.381l2.611,1.687a4.829,4.829,0,0,0,3.355.306L15.175,68.2c2.794-.731,6.179.45,4.965,1.694L5.231,85.242C4.2,86.3,5.64,87.986,9.74,87.986a9.269,9.269,0,0,0,3.431-.587c6.407-2.637,23.487-9.418,32.065-12.237-.334,1.781-.319,3.681,3.128,5.237,2.323,1.05,5.663,1.581,9.944,1.581a83.5,83.5,0,0,0,15.531-1.875c5.01-.925,15.03-3.912,21.012-4.112,1.29-.044,2.308-.456,2.308-.987V73C97.189,72.43,96.02,71.949,94.638,71.987Z" transform="translate(600.323 667.819)"/>
   </g>
 </svg>

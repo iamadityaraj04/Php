@@ -56,7 +56,7 @@ html{
     color: #e2f2e4;
     transition: color 0.3s ease-in-out;
 }
-@media only screen and (max-device-width : 1005px) {
+/* @media only screen and (max-device-width : 1005px) {
     #body{
         width: 100%;
     }
@@ -105,7 +105,7 @@ html{
     #loginBtn{
         color: #48b5d6;
     }
-}
+} */
 
 /* ---------------------body--------------------- */
 
@@ -218,7 +218,7 @@ html{
     height: 40px;
     border: none;
     padding: 5px 20px;
-    border-radius: 15px;
+    border-radius: 35px;
     font-size: 20px;
 }
 #verify-certificate-btn{
@@ -229,7 +229,7 @@ html{
     border-radius: 50px;
     color: #e2f2e4;
     cursor: pointer;
-    margin: 25px 70px;
+    margin: 25px 90px;
     box-shadow: 2px 2px 2px 0px #000000;
 }
 #verify-certificate-btn:hover{
@@ -237,7 +237,7 @@ html{
     transition: background-color 0.3s ease-in-out;
 }
 
-@media only screen and (max-device-width : 1024px){
+/* @media only screen and (max-device-width : 1024px){
     #subContainer2{
         height: 400px;
     }
@@ -273,7 +273,7 @@ html{
         width: 80px;
         height: 25px;
     }
-}
+} */
 /* ----------------subcontainer3----------------- */
 #subContainer3{
     height: 600px;
@@ -316,7 +316,7 @@ html{
 .steps img{
     width: 250px;
 }
-@media only screen and (max-device-width : 800px){
+/* @media only screen and (max-device-width : 800px){
     #subContainer3{
         height: 900px;
     }
@@ -352,7 +352,7 @@ html{
         width: 200px;
     }
     
-}
+} */
 /* -----------subcontainer 4 ----------- */
 #subContainer4{
     display: flex;
@@ -428,7 +428,7 @@ html{
     color: #e2f2e4;
     margin: 0px;
 }
-@media only screen and (max-device-width : 700px) {
+/* @media only screen and (max-device-width : 700px) {
     #get-in-touch{
         font-size: 20px;
         text-align: center;
@@ -527,7 +527,7 @@ html{
 }
 .footerContact{
     align-items: baseline;
-}
+} */
 
 /* ---------login page--------- */
 #login-container{
