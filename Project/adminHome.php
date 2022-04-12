@@ -49,7 +49,7 @@
                     Duration(in Weeks): <input type="number" name="c-duration" > <br><br>
                     Certificate Number: <input type="number" name="c-number" required> <br><br>
                     Date of issue: <input type="date" name="c-doi" required> <br><br>
-                    <input type="submit" name="details-submit" id="login-form-btn">
+                    <input type="submit" value="Upload" name="details-submit" id="login-form-btn">
                 </fieldset>
             </center>
         </form>
