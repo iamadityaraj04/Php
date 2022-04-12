@@ -26,7 +26,7 @@
             sleep(1);
             header('location:result.php');
         }else{
-            echo '<script>alert("DATA NOT FOUND!")</script>';
+            echo '<script>alert("Certificate Number Is Not Valid!")</script>';
         }
 
         
