@@ -3,7 +3,7 @@
     $cnumber=$_COOKIE["cnumber"];
     $fetch="SELECT * from certificateDetails where cNumber='$cnumber'";
     $result=$connect->query($fetch);
-    $rows=mysqli_fetch_array($result);  
+    $rows=mysqli_fetch_assoc($result);  
     ?>
 <!DOCTYPE html>
 <html lang="en">

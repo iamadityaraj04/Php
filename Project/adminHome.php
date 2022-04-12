@@ -68,16 +68,19 @@
 
         $query="SELECT * from certificateDetails where cNumber='$cNumber'" ;
         
-        
-        if(mysqli_num_rows($connect->query($query)) ==0){
-            $sql = "INSERT INTO certificateDetails(cNumber, cName, cDuration, cDoi,cCourseName)
-                    VALUES ('$cNumber', '$cName', '$cDuration', '$cDoi', '$cCourseName')";  
-            $insert=$connect->query($sql);
-            if($insert==true) {
-                echo '<script>alert("Uploaded Sucessfully :)")</script>';
-            } 
-        }else {
-            echo '<script>alert("Certificate with this id already exists!")</script>';
+        if(!preg_match ("/^[a-zA-z]*$/", $cName)){
+            echo '<script>alert("Name only contains alphabet and space.")</script>';
+        }else{
+            if(mysqli_num_rows($connect->query($query)) ==0){
+                $sql = "INSERT INTO certificateDetails(cNumber, cName, cDuration, cDoi,cCourseName)
+                        VALUES ('$cNumber', '$cName', '$cDuration', '$cDoi', '$cCourseName')";  
+                $insert=$connect->query($sql);
+                if($insert==true) {
+                    echo '<script>alert("Uploaded Sucessfully :)")</script>';
+                } 
+            }else {
+                echo '<script>alert("Certificate with this id already exists!")</script>';
+            }
         }
     }
 ?>

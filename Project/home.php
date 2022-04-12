@@ -4,13 +4,20 @@
         $qName=$_REQUEST['qName'];
         $qEmail=$_REQUEST['qEmail'];
         $qMsg=$_REQUEST['qMsg'];
-        if($qName!=''|| $qEmail!=''||$qMsg!=''){
-            $sql = "INSERT INTO query(qname, qemail, qmsg)
-                    VALUES ('$qName', '$qEmail', '$qMsg')";  
-            $insert=$connect->query($sql);
-            if($insert==true) {
-                echo '<script>alert("Thank You for writing us. :)")</script>';
-            }
+        if($qName==''){
+            echo '<script>alert("Name cannot be empty.")</script>';
+        }else if(!preg_match ("/^[a-zA-z]*$/", $qName)){
+            echo '<script>alert("Name only contains alphabet and space.")</script>';
+
+        }else{
+            if($qEmail!=''||$qMsg!=''|| $qName!=''){
+                $sql = "INSERT INTO query(qname, qemail, qmsg)
+                        VALUES ('$qName', '$qEmail', '$qMsg')";  
+                $insert=$connect->query($sql);
+                if($insert==true) {
+                    echo '<script>alert("Thank You for writing us. :)")</script>';
+                }
+            }         
         }
     } 
     if(isset($_REQUEST['cfetch'])){
