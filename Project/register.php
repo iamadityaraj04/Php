@@ -7,17 +7,21 @@
         $rEmail=$_REQUEST["register-email"];
         $rEmpId=$_REQUEST["register-empId"];
         $rPwd=$_REQUEST["register-pwd"];
-        
-        $query="SELECT empId from gvAdmin where empId='$rEmpId' or email='$rEmail'" ;
-        if(mysqli_num_rows($connect->query($query)) ==1){
-            echo '<script>alert("Accont with this email/employee Id already exists. Please login!")</script>';
-        }else {
-            $sql = "INSERT INTO gvAdmin(name, email, empId, pwd)
-                    VALUES ('$rName', '$rEmail', '$rEmpId', '$rPwd')";  
-            $insert=$connect->query($sql);
-            if($insert==true) {
-                echo '<script>alert("Registered Sucessfully. You can login now.")</script>';
-            } 
+        $cPwd=$_REQUEST["confirm-pwd"];
+        if($cPwd!=$rPwd){
+            echo '<script>alert("Confirm Password do not match.")</script>';
+        }else{
+            $query="SELECT empId from gvAdmin where empId='$rEmpId' or email='$rEmail'" ;
+            if(mysqli_num_rows($connect->query($query)) ==1){
+                echo '<script>alert("Accont with this email/employee Id already exists. Please login!")</script>';
+            }else {
+                $sql = "INSERT INTO gvAdmin(name, email, empId, pwd)
+                        VALUES ('$rName', '$rEmail', '$rEmpId', '$rPwd')";  
+                $insert=$connect->query($sql);
+                if($insert==true) {
+                    echo '<script>alert("Registered Sucessfully. You can login now.")</script>';
+                } 
+            }
         }
 }
 ?>
@@ -72,7 +76,7 @@
                             <input type="email" name="register-email" class="login-form" placeholder="Email" required><br><br>
                             <input type="number" name="register-empId" class="login-form" placeholder="Employee Id" required><br><br>
                             <input type="password" id="pwd" name="register-pwd" class="login-form" placeholder="Password" required> <br>
-                            <input type="text" id="cpwd" class="login-form" placeholder="Confirm Password" required> <br>
+                            <input type="text" id="cpwd"  name="confirm-pwd" class="login-form" placeholder="Confirm Password" required> <br>
                             <div id="err"></div>
                             <input type="submit" value="Register" name="register-submit" id="login-form-btn">
                         </form>
