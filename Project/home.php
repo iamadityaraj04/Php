@@ -29,7 +29,7 @@
         $result=$connect->query($fetch);
         
         if(mysqli_num_rows($result) ==1){
-            setcookie("cnumber","$cnumber", time()+3000,"/","",0);
+           setcookie("cnumber","$cnumber", time()+3000,"/","",0);
             sleep(1);
             header('location:result.php');
         }else{
